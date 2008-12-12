@@ -1,0 +1,16 @@
+<!--
+Description: misplaced <image> in <item> treated as <media:thumbnail url=...>; <link> in <image> does not override entry-level <link>
+Expect:      bozo and entries[0]['media_thumbnail'][0]['url'] == u'http://url.image.example.com' and entries[0]['link'] == u'http://item.example.com'
+-->
+<rss version="2.0">
+<channel>
+<link>http://channel.example.com</link>
+<item>
+  <link>http://item.example.com</link>
+  <image>
+    <url>http://url.image.example.com</url>
+    <link>http://link.image.example.com</link>
+  </image>
+</item>
+</channel>
+</rss
