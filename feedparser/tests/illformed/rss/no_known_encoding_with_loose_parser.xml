@@ -1,0 +1,10 @@
+﻿<!--
+Description: _LooseFeedParser is used without a known encoding and unknown_starttag is called during parsing (this used to fail). The test tries to recreate the circumstances under which this happens. FeedParser tries a variety of encodings and because you can decode pretty much anthing as, say, windows-1252 without an exception, it will usually find one that works. *Unless* the file has a BOM, in which case the _toUTF8() always tries the BOM encoding rather then the one it is actually supposed to try (possibly another bug in itself). In other words, for this test to pass successfully it needs to have a UTF8 BOM. In case the _toUTF8() function ever changes we also assert that no encoding was determined.
+Expect:      bozo and not encoding
+-->
+<rss version="2.0">
+<channel>
+<title>Valid UTF8: ѨInvalid UTF8: Espa�a</title>
+<description><pre class='screen'></pre></description>
+</channel>
+</rss>
