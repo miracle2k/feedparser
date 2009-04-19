@@ -1390,8 +1390,6 @@ class _FeedParserMixin:
         attrsD = self._itsAnHrefDamnIt(attrsD)
         if attrsD.has_key('href'):
             attrsD['href'] = self.resolveURI(attrsD['href'])
-            if attrsD.get('rel')=='enclosure' and not context.get('id'):
-                context['id'] = attrsD.get('href')
         expectingText = self.infeed or self.inentry or self.insource
         context.setdefault('links', [])
         context['links'].append(FeedParserDict(attrsD))
@@ -1522,9 +1520,6 @@ class _FeedParserMixin:
         context = self._getContext()
         attrsD['rel']='enclosure'
         context.setdefault('links', []).append(FeedParserDict(attrsD))
-        href = attrsD.get('href')
-        if href and not context.get('id'):
-            context['id'] = href
             
     def _start_source(self, attrsD):
         self.insource = 1
