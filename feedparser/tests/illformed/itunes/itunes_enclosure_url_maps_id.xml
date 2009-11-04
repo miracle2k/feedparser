@@ -1,6 +1,6 @@
 <!--
-Description: iTunes enclosure URL maps to ID if no ID is present
-Expect:      bozo and entries[0]['id'] == u'http://example.com/movie.mp4'
+Description: iTunes enclosure URL *DOES NOT* map to ID even if no ID is present
+Expect:      bozo and not entries[0].has_key('id')
 -->
 <rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd">
 <channel>

@@ -1,6 +1,6 @@
 <!--
-Description: iTunes link rel=enclosure href maps to ID if no ID is present
-Expect:      not bozo and entries[0]['id'] == u'http://example.com/movie.mp4'
+Description: iTunes link rel=enclosure href *DOES NOT* map to ID even if no ID is present
+Expect:      not bozo and not entries[0].has_key('id')
 -->
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd">
 <entry>
