@@ -1,7 +1,7 @@
-Bottom: 07f45f312630d279a6e04511d9a3d03d39c3cad4
-Top:    c6014395b8e9f18118d98852286642833090088e
+Bottom: ccc82241835f56a8d7e49e44f1541525f6b4fe51
+Top:    dc97cc588bc45b64ecdc5361b162996ad8adbfe3
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2008-12-12 03:42:40 +0100
+Date:   2009-11-04 08:46:41 +0100
 
 Make sure that everything is exposed as unicode strings, even when the feed is bozo.
 
@@ -22,7 +22,7 @@ Reported as issue #148.
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index 37a1a29..0862143 100644
+index 3cfde1b..505dd5f 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
 @@ -777,12 +777,8 @@ class _FeedParserMixin:

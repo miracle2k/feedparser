@@ -1,7 +1,7 @@
-Bottom: 02460ffe8e6d70967b3c7e05050fb441421d2cf3
-Top:    6086b0b14632177fad3e053252a717a02d79eb79
+Bottom: 7a7a61cb5f035bf471de130036d571d9f26b3a1d
+Top:    571140dda1ce107830bd5d9349a05cb30a45caca
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2009-03-17 05:15:17 +0100
+Date:   2009-11-04 08:46:41 +0100
 
 FeedParser's ``_LooseFeedParser`` class is (seemingly in pretty much all cases) instantiated with an empty string as the ```encoding`` value, which can lead to exceptions down the road when the encoding is actually used.
 
@@ -15,10 +15,10 @@ While not strictly necessary to run FeedPlatform, you are encouraged to use the 
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index bfebd8e..50202b2 100644
+index 4e94bb0..59e546d 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
-@@ -1733,7 +1733,7 @@ class _BaseHTMLProcessor(sgmllib.SGMLParser):
+@@ -1751,7 +1751,7 @@ class _BaseHTMLProcessor(sgmllib.SGMLParser):
                          value = unicode(value, self.encoding)
                      except:
                          value = unicode(value, 'iso-8859-1')
@@ -27,7 +27,7 @@ index bfebd8e..50202b2 100644
              strattrs = u''.join([u' %s="%s"' % (key, value) for key, value in uattrs])
              if self.encoding:
                  try:
-@@ -3567,7 +3567,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
+@@ -3585,7 +3585,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
              result['bozo_exception'] = feedparser.exc or e
              use_strict_parser = 0
      if not use_strict_parser:

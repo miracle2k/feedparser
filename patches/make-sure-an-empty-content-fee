@@ -1,7 +1,7 @@
-Bottom: 6086b0b14632177fad3e053252a717a02d79eb79
-Top:    cd7f6bf11ee0f2636b8df3fb0299abf4c6762f50
+Bottom: 571140dda1ce107830bd5d9349a05cb30a45caca
+Top:    ebcff211fbf53f81588a32a8f6bef3bd23feaf41
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2009-04-19 11:17:16 +0200
+Date:   2009-11-04 08:46:41 +0100
 
 Make sure an empty content feed (size/length 0) is flagged as bozo.
 
@@ -15,10 +15,10 @@ Reported as issue #149.
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index 50202b2..fec6e0c 100644
+index 59e546d..9a341f4 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
-@@ -3398,7 +3398,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
+@@ -3416,7 +3416,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
      except Exception, e:
          result['bozo'] = 1
          result['bozo_exception'] = e
@@ -27,7 +27,7 @@ index 50202b2..fec6e0c 100644
          f = None
  
      # if feed is gzip-compressed, decompress it
-@@ -3456,8 +3456,9 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
+@@ -3474,8 +3474,9 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
              bozo_message = 'no Content-type specified'
          result['bozo'] = 1
          result['bozo_exception'] = NonXMLContentType(bozo_message)
@@ -39,7 +39,7 @@ index 50202b2..fec6e0c 100644
  
      baseuri = http_headers.get('content-location', result.get('href'))
      baselang = http_headers.get('content-language', None)
-@@ -3470,7 +3471,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
+@@ -3488,7 +3489,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
          return result
  
      # if there was a problem downloading, we're done

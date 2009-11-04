@@ -1,7 +1,7 @@
-Bottom: 46749f4b2ea619e635109d46c787019f0a0750fa
-Top:    54f759745580a5f03bedaa26b9d759424fbcb390
+Bottom: 54fcc0339be4f81b7d9c0404ee162b5b332c7f8b
+Top:    71689e99101cbf67e2d308b33db688607a11563f
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2009-04-19 11:20:06 +0200
+Date:   2009-11-04 08:46:42 +0100
 
 Do not use an item's enclosure href as a fallback if an id (guid) is missing.
 
@@ -15,7 +15,7 @@ Reported as issue #131.
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index ba53113..e99c4f2 100644
+index 7ecf138..621b116 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
 @@ -1390,8 +1390,6 @@ class _FeedParserMixin:

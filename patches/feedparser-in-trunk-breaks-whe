@@ -1,7 +1,7 @@
-Bottom: c6014395b8e9f18118d98852286642833090088e
-Top:    7eb5da83a7960ca071a7733dc5f37107ea596679
+Bottom: dc97cc588bc45b64ecdc5361b162996ad8adbfe3
+Top:    ac565af90cf93842f73337a8d5ed0d71ade455e1
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2008-12-12 03:54:23 +0100
+Date:   2009-11-04 08:46:41 +0100
 
 FeedParser, in trunk, breaks when an item (invalidly) contains an <image> tag.
 
@@ -15,7 +15,7 @@ While not strictly necessary to run FeedPlatform, you are strongly encouraged to
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index 0862143..0a1959b 100644
+index 505dd5f..5c075a3 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
 @@ -800,7 +800,7 @@ class _FeedParserMixin:

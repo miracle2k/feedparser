@@ -1,13 +1,13 @@
 Version: 1
-Previous: 5f29b143342433da71819c5175e6ce7990bb7003
-Head: 785f2bb405f8e99ef84c57a466c677429fb30c3a
+Previous: 534c9b33dffc51f682ec3fc34904ad2fb74e32d6
+Head: 01c1a88ce3e36781a9ebfaedc384f4d79d1de756
 Applied:
-  make-sure-that-everything-is-e: cadad49eabdfe79ea834470fd802c2af2c1a7ccc
-  feedparser-in-trunk-breaks-whe: c19b5bb950a8cead2a31fc0c72038298d26616de
-  no-longer-convert-an-item-id-g: a6eb9cfa880f62b9738685f023444bb51dac90ed
-  feedparser-s-_loosefeedparser-: 9e1fa7c9b3b311e4e2da2501dc5ab7962fc45362
-  make-sure-an-empty-content-fee: fc80fbce8c84bf3ad20ed2e1f02f7614ab270584
-  expose-the-raw-feed-content-as: 1fdcce457e553dc4317c1f99c30a2f99c2731405
-  do-not-use-an-item-s-enclosure: 785f2bb405f8e99ef84c57a466c677429fb30c3a
+  make-sure-that-everything-is-e: 77b404260cbffc4b2335824622bbf2b18c5e19ca
+  feedparser-in-trunk-breaks-whe: e5525ab3909f1d96e16751182c65c331c63ee654
+  no-longer-convert-an-item-id-g: ddb0f447a6cff0c36dda2952f615bba1235e3b55
+  feedparser-s-_loosefeedparser-: 93c782cf6f99bac20a8c0cd9cd661eefa5d13726
+  make-sure-an-empty-content-fee: 38959addadd19cb9575a50d28cce5f7440fc3f11
+  expose-the-raw-feed-content-as: c104d3c56727e7d6d2cb4137d6b45b402f23655d
+  do-not-use-an-item-s-enclosure: 01c1a88ce3e36781a9ebfaedc384f4d79d1de756
 Unapplied:
 Hidden:

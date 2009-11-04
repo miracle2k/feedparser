@@ -1,7 +1,7 @@
-Bottom: cd7f6bf11ee0f2636b8df3fb0299abf4c6762f50
-Top:    46749f4b2ea619e635109d46c787019f0a0750fa
+Bottom: ebcff211fbf53f81588a32a8f6bef3bd23feaf41
+Top:    54fcc0339be4f81b7d9c0404ee162b5b332c7f8b
 Author: melsdoerfer <michael@elsdoerfer.com>
-Date:   2009-04-19 11:19:57 +0200
+Date:   2009-11-04 08:46:42 +0100
 
 Expose the raw feed content as an item ('data') in the result dict. This is for example useful for implementing features where you need access to data that is not parsed (e.g. comments), say for example claimcode-like functionality.
 
@@ -13,10 +13,10 @@ Reported as issue #164.
 ---
 
 diff --git a/feedparser/feedparser.py b/feedparser/feedparser.py
-index fec6e0c..ba53113 100644
+index 9a341f4..7ecf138 100644
 --- a/feedparser/feedparser.py
 +++ b/feedparser/feedparser.py
-@@ -3394,7 +3394,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
+@@ -3412,7 +3412,7 @@ def parse(url_file_stream_or_string, etag=None, modified=None, agent=None, refer
          handlers = [handlers]
      try:
          f = _open_resource(url_file_stream_or_string, etag, modified, agent, referrer, handlers)
