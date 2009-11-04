@@ -1,6 +1,13 @@
 Version: 1
-Previous: None
+Previous: 5f29b143342433da71819c5175e6ce7990bb7003
 Head: 785f2bb405f8e99ef84c57a466c677429fb30c3a
 Applied:
+  make-sure-that-everything-is-e: cadad49eabdfe79ea834470fd802c2af2c1a7ccc
+  feedparser-in-trunk-breaks-whe: c19b5bb950a8cead2a31fc0c72038298d26616de
+  no-longer-convert-an-item-id-g: a6eb9cfa880f62b9738685f023444bb51dac90ed
+  feedparser-s-_loosefeedparser-: 9e1fa7c9b3b311e4e2da2501dc5ab7962fc45362
+  make-sure-an-empty-content-fee: fc80fbce8c84bf3ad20ed2e1f02f7614ab270584
+  expose-the-raw-feed-content-as: 1fdcce457e553dc4317c1f99c30a2f99c2731405
+  do-not-use-an-item-s-enclosure: 785f2bb405f8e99ef84c57a466c677429fb30c3a
 Unapplied:
 Hidden:
