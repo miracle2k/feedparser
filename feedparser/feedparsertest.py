@@ -98,11 +98,7 @@ class FeedParserTestServer(Thread):
 class TestCase(unittest.TestCase):
   def failUnlessEval(self, evalString, env, msg=None):
     """Fail unless eval(evalString, env)"""
-    failure=(msg or 'not eval(%s)' % evalString)
-    try:
-      env = env.data
-    except:
-      pass
+    failure=(msg or 'not eval(%s)' % evalString)    
     if not eval(evalString, env):
       raise self.failureException, failure
   
